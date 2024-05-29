@@ -484,13 +484,13 @@ function Inventorylist() {
     setCurrentPage(newPage);
 
     try {
-      // Scroll to the top of the page
+  
       window.scrollTo({ top: 0, behavior: "smooth" });
       window.parent.postMessage({ messageType: "scrolltop", data: 0 }, "*");
 
       const response = await fetchData(newPage);
       console.log("Page changed:", newPage);
-      // Process the response if needed
+  
     } catch (error) {
       console.error("Error fetching data:", error.message);
     }

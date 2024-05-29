@@ -185,7 +185,7 @@ const handleCloseButtonClick = () => {
                 alt=""
                 onLoad={() => {
                   handleLargeImageLoad();
-                  setLoading(false); // Set loading to false when the large image is loaded
+                  setLoading(false);
                 }}
                 className={isZoomedIn ? "zoomed-in" : ""}
                 onClick={handleLargeImageClick}

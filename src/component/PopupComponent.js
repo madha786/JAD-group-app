@@ -44,7 +44,6 @@ const PopupComponent = (props) => {
   };
 
   const handleSaveNewClick = () => {
-    // Handle Save and New logic
     setShowButtons(false);
   };
 

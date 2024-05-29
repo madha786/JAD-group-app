@@ -5,7 +5,7 @@ import SkyBlueBox from "../component/SkyBlueBox";
 import { Route } from "react-router-dom";
 
 const ServiceNotesStatus = ({ request }) => {
-  // State to manage the content of the textarea and an array of notes
+
   const [note, setNote] = useState("");
   const [notesArray, setNotesArray] = useState([]);
   const [activeButton, setActiveButton] = useState("Service-Notes-Status");
@@ -13,18 +13,18 @@ const ServiceNotesStatus = ({ request }) => {
   const handleButtonClicks = (button) => {
     setActiveButton(button);
   };
-  // Function to handle the textarea value change
+
   const handleNoteChange = (event) => {
     setNote(event.target.value);
   };
 
-  // Function to handle the button click and update the notes array
+
   const handleButtonClick = () => {
-    // Add the current note with a timestamp to the array
+
     const timestamp = new Date().toLocaleTimeString();
     setNotesArray([...notesArray, { note: note, timestamp: timestamp }]);
 
-    // Clear the textarea after adding the note
+
     setNote("");
   };
 
